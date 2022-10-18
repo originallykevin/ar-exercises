@@ -16,7 +16,7 @@ Store.create([
 # stores that carry men's apparel
 @mens_stores = Store.where(mens_apparel:true)
 # stores that carry women's apparel and <1M annual revenue
-@womens_stores = Store.where("womens_apparel =true and annual_revenue < 1000000")
+@womens_stores = Store.where("womens_apparel = true and annual_revenue < 1000000")
 
 for index in @mens_stores do
   puts "Mens store - name: #{index.name}, annual_revenue: #{index.annual_revenue}" 
